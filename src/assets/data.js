@@ -33,17 +33,6 @@ export const hardSkills = [
   },
 ];
 
-export const softSkills = [
-  { skill: "Honest" },
-  { skill: "Diligent" },
-  { skill: "Cooperative" },
-  { skill: "Dedicated" },
-  { skill: "Passionate" },
-  { skill: "Receptive" },
-  { skill: "Curious" },
-  { skill: "Persevering" },
-];
-
 export const projects = [
   {
     id: 1,

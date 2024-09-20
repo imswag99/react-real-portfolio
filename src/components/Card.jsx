@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Card = ({ data, name }) => {
+const Card = ({ data }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -9,7 +9,6 @@ const Card = ({ data, name }) => {
       viewport={{ once: true }}
       className="rounded-md p-5 mt-10 shadow-md"
     >
-      <h1 className="text-center text-xl font-bold mb-5">{name}</h1>
       <div className="grid grid-cols-2 grid-rows-4 gap-x-10 gap-y-10 pr-5">
         {data.map((item, index) => (
           <div key={index} className="flex gap-2">

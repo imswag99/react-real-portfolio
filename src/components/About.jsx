@@ -22,7 +22,7 @@ const About = () => {
               </div>
             </div>
             <div className="flex flex-col justify-between md:items-start">
-              <p className="text-justify mt-10">
+              <p className="text-left mt-10">
                 Hi, I'm Swagat Talukdar, an aspiring web developer with a
                 passion for creating beautiful, functional, and user-centered
                 digital experiences. I look forward to the opportunity to make

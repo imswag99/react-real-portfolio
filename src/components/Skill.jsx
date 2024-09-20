@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { hardSkills, softSkills } from "../assets/data";
+import { hardSkills } from "../assets/data";
 import Card from "./Card";
 import { DarkModeContext } from "../context/DarkModeContext";
 
@@ -12,7 +12,7 @@ const Skill = () => {
       <div className="w-full flex flex-col justify-center items-center">
         <div className="text-center">
           <h1 className="text-orange text-3xl font-bold">SKILLS</h1>
-          <h3 className="text-gray-500">My hard and soft skills</h3>
+          <h3 className="text-gray-500">My technical skills</h3>
         </div>
         <div className="text-4xl flex justify-center gap-4 mt-10">
           <i className="bx bxl-html5 text-html transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
@@ -25,7 +25,6 @@ const Skill = () => {
         </div>
         <div className="flex flex-col lg:flex-row lg:gap-x-20">
           <Card data={hardSkills} name="Hard skills" />
-          <Card data={softSkills} name="Soft skills" />
         </div>
       </div>
     </>

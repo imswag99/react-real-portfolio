@@ -68,7 +68,7 @@ const Hero = () => {
           </motion.div>
           <motion.p
             variants={children}
-            className="text-gray-500 text-md leading-8 text-justify"
+            className="text-gray-500 text-md leading-8"
           >
             As an aspiring full-stack developer, I am trying to turning ideas
             into innovative web applications. Explore my projects showcasing my
