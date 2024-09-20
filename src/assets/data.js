@@ -75,6 +75,15 @@ export const projects = [
   {
     id: 4,
     image: "work4",
+    title: "MERN Stack Airbnb Clone Booking Web Application",
+    description:
+      "A feature-rich E-commerce Web App using ReactJs, MongoDB, ExpressJs and NodeJs. It allows you to register and login your credentials. You can create, update, delete your properties and list them for booking as well as upload the pictures. Moreover, you can book a place for yourself.",
+    github: "https://github.com/imswag99/mern-booking-app",
+  },
+
+  {
+    id: 5,
+    image: "work5",
     title: "Next.js Portfolio Website",
     description:
       "A dynamic portfolio website using Next.js and framer motion to give users a delightful experience throughout.",
@@ -82,8 +91,8 @@ export const projects = [
   },
 
   {
-    id: 5,
-    image: "work5",
+    id: 6,
+    image: "work6",
     title: "Next.js Movies and Series Info Web Application",
     description:
       "A simple Next.js project for Netflix movies and series information including the implementation of pagination",
