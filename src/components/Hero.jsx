@@ -53,7 +53,7 @@ const Hero = () => {
         >
           <motion.h1
             variants={children}
-            className="capitalize text-4xl text-orange font-bold md:text-5xl lg:text-4xl xl:text-5xl"
+            className="capitalize text-3xl text-orange font-bold md:text-5xl lg:text-4xl xl:text-5xl"
           >
             swagat talukdar
           </motion.h1>
@@ -61,7 +61,7 @@ const Hero = () => {
             variants={children}
             className="flex items-center gap-3"
           >
-            <span className="block w-20 h-[1px] bg-dark dark:bg-light"></span>
+            <span className="block w-10 h-[1px] bg-dark dark:bg-light md:w-20"></span>
             <h3 className="text-md font-semibold md:text-lg lg:text-md xl:text-xl">
               Developer and designer.
             </h3>
