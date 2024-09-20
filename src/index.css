@@ -25,6 +25,6 @@ a{
 }
 
 @font-face {
-  font-family: 'burtons';
-  src: url(/Burtons.otf);
+  font-family: 'fullName';
+  src: url(/bold.ttf);
 }

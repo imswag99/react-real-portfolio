@@ -23,7 +23,7 @@ export default {
         instagram: "#833AB4"
       },
       fontFamily: {
-        burtons: 'burtons',
+        fullName: 'fullName',
       }
     },
   },

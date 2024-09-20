@@ -53,7 +53,7 @@ const Hero = () => {
         >
           <motion.h1
             variants={children}
-            className="capitalize text-3xl text-orange font-bold md:text-5xl lg:text-4xl xl:text-5xl"
+            className="uppercase text-[1.7rem] text-orange font-fullName font-bold md:text-5xl lg:text-4xl"
           >
             swagat talukdar
           </motion.h1>
