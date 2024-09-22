@@ -23,7 +23,7 @@ const Footer = () => {
           <i className="bx bxl-github"></i>
         </a>
         <a
-          href="https://www.linkedin.com/in/swagat-talukdar-309806278"
+          href="https://www.linkedin.com/in/swagattalukdar"
           target="_blank"
         >
           <i className="bx bxl-linkedin-square"></i>

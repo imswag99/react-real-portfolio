@@ -163,7 +163,7 @@ const Navbar = () => {
                 <motion.a
                   variants={children1}
                   onClick={() => setMenu(false)}
-                  href="https://www.linkedin.com/in/swagat-talukdar-309806278"
+                  href="https://www.linkedin.com/in/swagattalukdar"
                   target="_blank"
                 >
                   <i className="bx bxl-linkedin-square text-linkedin"></i>
