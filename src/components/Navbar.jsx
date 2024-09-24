@@ -74,7 +74,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full justify-between py-10 hidden md:hidden lg:flex gap-10">
+      <motion.nav
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 1.5, duration: 1 } }}
+        className="w-full justify-between py-10 hidden md:hidden lg:flex gap-10"
+      >
         <h1 className="text-xl font-bold uppercase">swagat</h1>
         <ul className="flex items-center gap-8">
           <li className="flex items-center gap-1 cursor-pointer">
@@ -111,9 +115,13 @@ const Navbar = () => {
             )}
           </li>
         </ul>
-      </nav>
+      </motion.nav>
 
-      <nav className="fixed left-0 bottom-0 z-10 w-full bg-dark text-light dark:bg-light dark:text-dark lg:hidden">
+      <motion.nav
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 1.5, duration: 1 } }}
+        className="fixed left-0 bottom-0 z-10 w-full bg-dark text-light dark:bg-light dark:text-dark lg:hidden"
+      >
         <div className="w-full flex justify-between items-center p-5">
           <h1 className="text-xl font-bold uppercase">swagat</h1>
           <div className="flex items-center gap-5">
@@ -239,7 +247,7 @@ const Navbar = () => {
             </div>
           </motion.div>
         )}
-      </nav>
+      </motion.nav>
     </>
   );
 };

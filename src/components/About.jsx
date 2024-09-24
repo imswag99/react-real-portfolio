@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { DarkModeContext } from "../context/DarkModeContext";
+import { motion } from "framer-motion";
 
 const About = () => {
   const { aboutRef } = useContext(DarkModeContext);
@@ -7,7 +8,11 @@ const About = () => {
   return (
     <>
       <div ref={aboutRef}></div>
-      <div className="w-full">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 1.5, duration: 1 } }}
+        className="w-full"
+      >
         <div className="text-center">
           <h1 className="text-orange text-3xl font-bold">ABOUT ME</h1>
           <h3 className="text-gray-500">My introduction</h3>
@@ -41,7 +46,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

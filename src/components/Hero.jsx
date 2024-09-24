@@ -9,8 +9,8 @@ const parent = {
   animate: {
     opacity: 1,
     transition: {
-      delay: 0.5,
-      staggerChildren: 0.2,
+      delay: 1.5,
+      staggerChildren: 0.5,
     },
   },
 };
@@ -35,15 +35,19 @@ const Hero = () => {
   return (
     <>
       <div ref={homeRef}></div>
-      <div className="w-full flex flex-col gap-10 lg:flex-row lg:gap-20 lg:justify-center lg:items-center">
+      <div className="w-full flex flex-col justify-center items-center gap-10 lg:flex-row lg:gap-20">
         <div className="flex justify-center items-center lg:flex-1 lg:justify-end">
-          <div className="w-full h-full bg-orange rounded-xl flex justify-center items-center overflow-hidden lg:min-h-80">
+          <motion.div
+            initial={{ x: 500 }}
+            animate={{ x: 0, transition: { delay: 0.5, duration: 0.8 } }}
+            className="w-full h-full bg-orange rounded-xl flex justify-center items-center overflow-hidden lg:min-h-80"
+          >
             <img
               className="w-[100%] h-[100%] object-cover"
               src="/hero.png"
               alt=""
             />
-          </div>
+          </motion.div>
         </div>
         <motion.div
           variants={parent}
@@ -57,10 +61,7 @@ const Hero = () => {
           >
             swagat talukdar
           </motion.h1>
-          <motion.div
-            variants={children}
-            className="flex items-center gap-3"
-          >
+          <motion.div variants={children} className="flex items-center gap-3">
             <span className="block w-10 h-[1px] bg-dark dark:bg-light md:w-20"></span>
             <h3 className="text-md font-semibold md:text-lg lg:text-md xl:text-xl">
               Developer and designer.
@@ -74,10 +75,7 @@ const Hero = () => {
             into innovative web applications. Explore my projects showcasing my
             effort in React.js and web development.
           </motion.p>
-          <motion.div
-            variants={children}
-            className="flex"
-          >
+          <motion.div variants={children} className="flex">
             <a
               className="font-bold flex items-center gap-2 bg-dark text-light px-10 py-3 rounded-2xl dark:bg-light dark:text-dark"
               href="mailto:swagattalukdar007@gmail.com@gmail.com"
