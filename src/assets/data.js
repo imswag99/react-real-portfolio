@@ -1,11 +1,7 @@
 export const hardSkills = [
   {
-    skill: "HTML",
-    level: "Basic",
-  },
-  {
-    skill: "CSS",
-    level: "Advanced",
+    skill: "HTML and CSS",
+    level: "Intermediate",
   },
   {
     skill: "Javasript",
@@ -29,6 +25,18 @@ export const hardSkills = [
   },
   {
     skill: "Tailwind CSS",
+    level: "Intermediate",
+  },
+  {
+    skill: "Python",
+    level: "Basic",
+  },
+  {
+    skill: "Django",
+    level: "Intermediate",
+  },
+  {
+    skill: "SQL",
     level: "Intermediate",
   },
 ];

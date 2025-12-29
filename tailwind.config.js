@@ -20,7 +20,9 @@ export default {
         tailwind: "#4dc0b5",
         facebook: "#1877F2",
         linkedin: "#0077B5",
-        instagram: "#833AB4"
+        instagram: "#833AB4",
+        python: "#4584b6",
+        django: "#3c873a",
       },
       fontFamily: {
         fullName: 'fullName',

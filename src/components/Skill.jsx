@@ -22,6 +22,8 @@ const Skill = () => {
           <i className="bx bxl-nodejs text-node transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
           <i className="bx bxl-mongodb text-mongo transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
           <i className="bx bxl-tailwind-css text-tailwind transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
+          <i className="bx bxl-python text-python transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
+          <i className="bx bxl-django text-django transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
         </div>
         <div className="flex flex-col lg:flex-row lg:gap-x-20">
           <Card data={hardSkills} name="Hard skills" />
