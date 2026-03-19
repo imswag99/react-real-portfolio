@@ -13,7 +13,7 @@ const App = () => {
 
     return (
         <div className={`${darkMode ? "dark" : ""} overflow-hidden`}>
-            <div className="w-full min-h-screen flex flex-col gap-10 px-10 md:px-20 lg:px-40 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark">
+            <div className="w-full min-h-screen flex flex-col gap-10 px-3 md:px-20 lg:px-40 bg-backgroundLight text-textLight dark:bg-backgroundDark dark:text-textDark">
                 <Navbar />
                 <Hero />
                 <About />
