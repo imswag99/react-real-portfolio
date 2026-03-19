@@ -8,7 +8,7 @@ const FeaturedProject = ({ project }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-10 items-center"
+            className="grid md:grid-cols-2 max-sm:flex max-sm:flex-col-reverse gap-10 items-center"
         >
 
             <div className="flex flex-col gap-6">
