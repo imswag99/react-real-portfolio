@@ -3,52 +3,112 @@ import { DarkModeContext } from "../context/DarkModeContext";
 import { motion } from "framer-motion";
 
 const About = () => {
-  const { aboutRef } = useContext(DarkModeContext);
+    const { aboutRef } = useContext(DarkModeContext);
 
-  return (
-    <>
-      <div ref={aboutRef}></div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 1.5, duration: 1 } }}
-        className="w-full"
-      >
-        <div className="text-center">
-          <h1 className="text-orange text-3xl font-bold">ABOUT ME</h1>
-          <h3 className="text-gray-500">My introduction</h3>
-          <div className="flex flex-col justify-center items-center md:flex-row md:gap-20">
-            <div className="w-full flex justify-center items-center md:justify-end">
-              <div className="bg-orange rounded-md w-60 h-60 flex justify-center items-center mt-10 overflow-hidden">
-                <img
-                  className="w-[100%] h-[100%] object-cover"
-                  src="/avatar.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="flex flex-col justify-between md:items-start">
-              <p className="text-left mt-10">
-                Hi, I'm Swagat Talukdar, an aspiring web developer with a
-                passion for creating beautiful, functional, and user-centered
-                digital experiences. I look forward to the opportunity to make
-                my skills useful for your project.
-              </p>
-              <div className="flex justify-center items-center mt-10">
-                <a
-                  className="font-bold flex items-center gap-2 bg-dark text-light px-10 py-3 rounded-2xl dark:bg-light dark:text-dark"
-                  href="/Resume.pdf"
-                  download={true}
-                >
-                  <span>Resume</span>
-                  <i className="bx bx-download text-xl"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </>
-  );
+    return (
+        <>
+            <div ref={aboutRef}></div>
+
+            <motion.section
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="w-full flex flex-col items-center"
+            >
+
+                <div className="text-center mb-12">
+                    <h1 className="text-3xl md:text-4xl font-bold text-primary tracking-wide">
+                        About Me
+                    </h1>
+                    <p className="text-mutedLight dark:text-mutedDark mt-2">
+                        A little bit about who I am
+                    </p>
+                </div>
+
+
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-12 max-w-5xl w-full">
+
+                    <div className="relative w-64 h-64 group">
+                        <div className="absolute inset-0 bg-primary opacity-10 blur-2xl rounded-2xl"></div>
+
+                        <div className="relative rounded-2xl overflow-hidden shadow-card border border-gray-200 dark:border-gray-800">
+                            <img
+                                src="/avatar.png"
+                                alt="Swagat Talukdar"
+                                className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 max-w-xl">
+                        <p className="text-mutedLight dark:text-mutedDark leading-relaxed">
+                            I'm{" "}
+                            <span className="text-accent font-semibold">
+                                Swagat Talukdar
+                            </span>
+                            , a{" "}
+                            <span className="text-accent font-semibold">
+                                full-stack developer
+                            </span>{" "}
+                            who enjoys building modern web applications that
+                            combine clean user interfaces with reliable backend
+                            systems.
+                        </p>
+
+                        <p className="text-mutedLight dark:text-mutedDark leading-relaxed">
+                            I have developed several full-stack applications
+                            including a real-time project management platform, a
+                            knowledge tracking system for learning analytics,
+                            and a learning management system. Through these
+                            projects, I gained hands-on experience with
+                            technologies such as React, Node.js, Express,
+                            Django, MongoDB, and REST APIs.
+                        </p>
+
+                        <div className="grid grid-cols-3 gap-4 w-full max-sm:grid-cols-1">
+                            <div className="bg-surfaceLight dark:bg-surfaceDark rounded-lg p-4 text-center shadow-card">
+                                <h3 className="text-xl font-bold text-accent">
+                                    4+
+                                </h3>
+                                <p className="text-sm text-mutedLight dark:text-mutedDark">
+                                    Full-Stack Projects
+                                </p>
+                            </div>
+
+                            <div className="bg-surfaceLight dark:bg-surfaceDark rounded-lg p-4 text-center shadow-card">
+                                <h3 className="text-xl font-bold text-accent">
+                                    MERN
+                                </h3>
+                                <p className="text-sm text-mutedLight dark:text-mutedDark">
+                                    Primary Stack
+                                </p>
+                            </div>
+
+                            <div className="bg-surfaceLight dark:bg-surfaceDark rounded-lg p-4 text-center shadow-card">
+                                <h3 className="text-xl font-bold text-accent">
+                                    REST
+                                </h3>
+                                <p className="text-sm text-mutedLight dark:text-mutedDark">
+                                    API Development
+                                </p>
+                            </div>
+                        </div>
+
+                        <a
+                            href="/Resume.pdf"
+                            download
+                            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-xl font-medium hover:shadow-glow transition"
+                        >
+                            Download Resume
+                            <i className="bx bx-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </motion.section>
+        </>
+    );
 };
 
 export default About;

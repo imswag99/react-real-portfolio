@@ -1,93 +1,129 @@
 import React, { useContext } from "react";
 import { DarkModeContext } from "../context/DarkModeContext";
-import { delay, motion } from "framer-motion";
-
-const parent = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      delay: 1.5,
-      staggerChildren: 0.5,
-    },
-  },
-};
-
-const children = {
-  initial: {
-    opacity: 1,
-    y: 50,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-    },
-  },
-};
+import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
 const Hero = () => {
-  const { homeRef } = useContext(DarkModeContext);
+    const { homeRef, projectRef } = useContext(DarkModeContext);
 
-  return (
-    <>
-      <div ref={homeRef}></div>
-      <div className="w-full flex flex-col justify-center items-center gap-10 lg:flex-row lg:gap-20">
-        <div className="flex justify-center items-center lg:flex-1 lg:justify-end">
-          <motion.div
-            initial={{ x: 500 }}
-            animate={{ x: 0, transition: { delay: 0.5, duration: 0.8 } }}
-            className="w-full h-full bg-orange rounded-xl flex justify-center items-center overflow-hidden lg:min-h-80"
-          >
-            <img
-              className="w-[100%] h-[100%] object-cover"
-              src="/hero.png"
-              alt=""
-            />
-          </motion.div>
-        </div>
-        <motion.div
-          variants={parent}
-          initial="initial"
-          animate="animate"
-          className="flex flex-col gap-7 justify-center items-start lg:flex-1"
-        >
-          <motion.h1
-            variants={children}
-            className="uppercase text-[1.6rem] text-orange font-fullName font-bold md:text-5xl lg:text-4xl"
-          >
-            swagat talukdar
-          </motion.h1>
-          <motion.div variants={children} className="flex items-center gap-3">
-            <span className="block w-10 h-[1px] bg-dark dark:bg-light md:w-20"></span>
-            <h3 className="text-md font-semibold md:text-lg lg:text-md xl:text-xl">
-              Developer and designer.
-            </h3>
-          </motion.div>
-          <motion.p
-            variants={children}
-            className="text-gray-500 text-md leading-8"
-          >
-            As an aspiring full-stack developer, I am trying to turning ideas
-            into innovative web applications. Explore my projects showcasing my
-            effort in React.js and web development.
-          </motion.p>
-          <motion.div variants={children} className="flex">
-            <a
-              className="font-bold flex items-center gap-2 bg-dark text-light px-10 py-3 rounded-2xl dark:bg-light dark:text-dark"
-              href="mailto:swagattalukdar007@gmail.com@gmail.com"
-            >
-              <span>Contact</span>
-              <i className="bx bx-paper-plane text-xl"></i>
-            </a>
-          </motion.div>
-        </motion.div>
-      </div>
-    </>
-  );
+    const scrollToProjects = () => {
+        projectRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    return (
+        <>
+            <div ref={homeRef}></div>
+
+            <section className="relative rounded-3xl w-full min-h-[90vh] flex items-center px-6 lg:px-16 overflow-hidden">
+
+                <div className="absolute top-[-80px] left-[-80px] w-96 h-96 bg-primary/10 blur-3xl"></div>
+
+                <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="flex flex-col gap-6"
+                    >
+
+                        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                            I build{" "}
+                            <span className="text-primary">
+                                full-stack web applications
+                            </span>{" "}
+                            designed for performance and scalability.
+                        </h1>
+
+                        <p className="text-mutedLight dark:text-mutedDark max-w-lg">
+                            Hi, I'm Swagat — a full-stack developer.
+                        </p>
+
+                        <div className="flex gap-4">
+                            <button
+                                onClick={scrollToProjects}
+                                className="bg-primary text-white px-6 py-3 rounded-xl shadow-glow transition transform hover:scale-105 active:scale-95"
+                            >
+                                View Projects
+                            </button>
+
+                            <a
+                                href="mailto:swagattalukdar007@gmail.com"
+                                className="border border-primary text-primary px-6 py-3 rounded-xl transition hover:bg-primary hover:text-white"
+                            >
+                                Contact
+                            </a>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                        className="relative flex justify-center"
+                    >
+
+                        <div className="absolute w-80 h-80 bg-primary/10 blur-3xl"></div>
+
+                        <Tilt
+                            tiltMaxAngleX={6}
+                            tiltMaxAngleY={6}
+                            glareEnable={true}
+                            glareMaxOpacity={0.08}
+                            scale={1.02}
+                        >
+
+                            <div className="absolute inset-0 translate-x-4 translate-y-4 bg-primary/10 rounded-xl blur-xl"></div>
+
+                            <div className="relative bg-surfaceDark rounded-xl shadow-card overflow-hidden font-mono text-sm">
+
+                                <div className="flex items-center justify-between px-4 py-2 bg-[#1e1e1e] text-gray-300 text-xs">
+                                    <span>system.js</span>
+                                    <div className="flex gap-4 text-sm">
+                                        <span>—</span>
+                                        <span>□</span>
+                                        <span>✕</span>
+                                    </div>
+                                </div>
+
+                                <div className="p-5 text-mutedDark leading-7">
+                                    <p>
+                                        <span className="text-purple-400">
+                                            async function
+                                        </span>{" "}
+                                        <span className="text-blue-400">
+                                            buildApplication
+                                        </span>
+                                        () {"{"}
+                                    </p>
+                                    <p className="pl-5">
+                                        const auth = await handleAuth();
+                                    </p>
+                                    <p className="pl-5">
+                                        const data = await manageDatabase();
+                                    </p>
+                                    <p className="pl-5">
+                                        const realtime = enableLiveUpdates();
+                                    </p>
+                                    <p className="pl-5">
+                                        return {"{ auth, data, realtime }"};
+                                    </p>
+                                    <p>{"}"}</p>
+                                </div>
+
+                                <div className="bg-black/40 p-4 text-green-400">
+                                    <p>&gt; npm run build</p>
+                                    <p>✔ Compiled successfully</p>
+                                    <p>✔ API connected</p>
+                                    <p>✔ Ready for production</p>
+                                </div>
+                            </div>
+                        </Tilt>
+                    </motion.div>
+                </div>
+            </section>
+        </>
+    );
 };
 
 export default Hero;

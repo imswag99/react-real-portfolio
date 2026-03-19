@@ -1,98 +1,71 @@
-export const hardSkills = [
-  {
-    skill: "HTML and CSS",
-    level: "Intermediate",
-  },
-  {
-    skill: "Javasript",
-    level: "Intermediate",
-  },
-  {
-    skill: "React Js",
-    level: "Intermediate",
-  },
-  {
-    skill: "Node Js",
-    level: "Intermediate",
-  },
-  {
-    skill: "Express Js",
-    level: "Intermediate",
-  },
-  {
-    skill: "MongoDB",
-    level: "Intermediate",
-  },
-  {
-    skill: "Tailwind CSS",
-    level: "Intermediate",
-  },
-  {
-    skill: "Python",
-    level: "Basic",
-  },
-  {
-    skill: "Django",
-    level: "Intermediate",
-  },
-  {
-    skill: "SQL",
-    level: "Intermediate",
-  },
-];
-
 export const projects = [
-  {
-    id: 1,
-    image: "work1",
-    title: "MERN Stack Real Estate Web Application",
-    description:
-      "A feature-rich Real Estate Web App using ReactJs, MongoDB, ExpressJs and NodeJs. It allows you to register and login your credentials. You can search, filter, add and save houses, apartments, etc. along with locations on the map. You can even live chat with other users using socket.io",
-    github: "https://github.com/imswag99/react-real-estate",
-  },
+    {
+        id: 1,
+        image: "taskpilot",
+        title: "TaskPilot",
+        subtitle: "Real-Time Project Management Platform",
+        description:
+            "A full-stack project management platform designed for teams to manage tasks, collaborate in real time, and track progress efficiently.",
+        tech: ["React", "Node.js", "MongoDB", "Socket.IO"],
+        highlights: [
+            "Implemented real-time synchronization using WebSockets (Socket.IO)",
+            "Kanban board with drag-and-drop",
+            "JWT authentication with role-based access",
+            "REST API with optimized database queries",
+        ],
+        github: "https://github.com/imswag99/mern-saas-project-management",
+        live: "https://mern-project-management-saas.vercel.app",
+    },
 
-  {
-    id: 2,
-    image: "work2",
-    title: "MERN Stack Food Ordering Web Application",
-    description:
-      "A feature-rich Food Ordering Web App using ReactJs, MongoDB, ExpressJs and NodeJs. It allows you to register and login your credentials. You can search, filter the menu including a paypal payment gateway on checkout",
-    github: "https://github.com/imswag99/mern-food-delivery",
-  },
+    {
+        id: 2,
+        image: "jobpedia",
+        title: "Jobpedia",
+        subtitle: "Full-Stack Job Portal System",
+        description:
+            "A full-featured job portal enabling recruiters to manage job postings and applicants to apply, track applications, and manage resumes through role-based dashboards.",
+        tech: ["Django", "PostgreSQL", "Tailwind CSS"],
+        highlights: [
+            "Role-based authentication (Recruiter & Applicant)",
+            "Job posting and application management system",
+            "Resume upload and tracking with status updates",
+            "Dashboard for recruiters and applicants",
+        ],
+        github: "https://github.com/imswag99/django_job_portal",
+    },
 
-  {
-    id: 3,
-    image: "work3",
-    title: "MERN Stack E-commerce Web Application",
-    description:
-      "A feature-rich E-commerce Web App using ReactJs, MongoDB, ExpressJs and NodeJs. It allows you to register and login your credentials. You can search, filter, sort and shop trending sneakers and pay either through COD or PayPal.",
-    github: "https://github.com/imswag99/mern-shoepedia",
-  },
+    {
+        id: 3,
+        image: "mindtrace",
+        title: "MindTrace",
+        subtitle: "Knowledge Retention Tracking System",
+        description:
+            "An application designed to analyze knowledge retention and model learning decay using custom time-based algorithms.",
+        tech: ["React", "Node.js", "MongoDB"],
+        highlights: [
+            "Custom knowledge decay algorithm",
+            "Data visualization for retention tracking",
+            "Optimized backend with indexed queries",
+            "Modular REST API architecture",
+        ],
+        github: "https://github.com/imswag99/mern-knowledge-decay-tracker",
+        live: " https://mern-knowledge-decay-tracker.vercel.app",
+    },
 
-  {
-    id: 4,
-    image: "work4",
-    title: "MERN Stack Airbnb Clone Booking Web Application",
-    description:
-      "A feature-rich E-commerce Web App using ReactJs, MongoDB, ExpressJs and NodeJs. It allows you to register and login your credentials. You can create, update, delete your properties and list them for booking as well as upload the pictures. Moreover, you can book a place for yourself.",
-    github: "https://github.com/imswag99/mern-booking-app",
-  },
-
-  {
-    id: 5,
-    image: "work5",
-    title: "Next.js Portfolio Website",
-    description:
-      "A dynamic portfolio website using Next.js and framer motion to give users a delightful experience throughout.",
-    github: "https://github.com/imswag99/nextjs-my-portfilio",
-  },
-
-  {
-    id: 6,
-    image: "work6",
-    title: "Next.js Movies and Series Info Web Application",
-    description:
-      "A simple Next.js project for Netflix movies and series information including the implementation of pagination",
-    github: "https://github.com/imswag99/nextjs-notflix",
-  },
+    {
+        id: 4,
+        image: "educate",
+        title: "E-DUCATE",
+        subtitle: "Learning Management System",
+        description:
+            "A full-stack learning platform enabling course creation, enrollment, and feedback with role-based access for students and instructors.",
+        tech: ["Django", "Tailwind CSS", "MySQL"],
+        highlights: [
+            "Role-based authentication system",
+            "Course and lesson management",
+            "Review and rating system",
+            "REST API-driven backend",
+        ],
+        github: "https://github.com/imswag99/django-mini-lms",
+    },
 ];

@@ -1,36 +1,64 @@
 import React, { useContext } from "react";
-import { hardSkills } from "../assets/data";
-import Card from "./Card";
 import { DarkModeContext } from "../context/DarkModeContext";
+import Card from "./Card";
 
 const Skill = () => {
-  const { skillRef } = useContext(DarkModeContext);
+    const { skillRef } = useContext(DarkModeContext);
 
-  return (
-    <>
-      <div ref={skillRef}></div>
-      <div className="w-full flex flex-col justify-center items-center">
-        <div className="text-center">
-          <h1 className="text-orange text-3xl font-bold">SKILLS</h1>
-          <h3 className="text-gray-500">My technical skills</h3>
-        </div>
-        <div className="text-4xl flex justify-center gap-4 mt-10">
-          <i className="bx bxl-html5 text-html transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
-          <i className="bx bxl-css3 text-css transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
-          <i className="bx bxl-javascript text-javascript transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
-          <i className="bx bxl-react text-react transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
-          <i className="bx bxl-nodejs text-node transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
-          <i className="bx bxl-mongodb text-mongo transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
-          <i className="bx bxl-tailwind-css text-tailwind transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
-          <i className="bx bxl-python text-python transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
-          <i className="bx bxl-django text-django transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"></i>
-        </div>
-        <div className="flex flex-col lg:flex-row lg:gap-x-20">
-          <Card data={hardSkills} name="Hard skills" />
-        </div>
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div ref={skillRef}></div>
+
+            <section className="w-full py-20">
+                <div className="max-w-5xl mx-auto px-6">
+
+                    <div className="text-center">
+                        <h1 className="text-3xl text-primary md:text-4xl font-bold">
+                            Skills & Technologies
+                        </h1>
+                        <p className="text-mutedLight dark:text-mutedDark mt-2">
+                            Technologies I use to build full-stack applications
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8 mt-12">
+                        <Card
+                            title="Frontend"
+                            skills={[
+                                "React",
+                                "JavaScript",
+                                "Tailwind CSS",
+                                "HTML",
+                                "CSS",
+                            ]}
+                        />
+
+                        <Card
+                            title="Backend"
+                            skills={[
+                                "Node.js",
+                                "Express.js",
+                                "Django",
+                                "REST APIs",
+                                "JWT Authentication",
+                            ]}
+                        />
+
+                        <Card
+                            title="Database & Tools"
+                            skills={[
+                                "MongoDB",
+                                "MySQL",
+                                "Git",
+                                "GitHub",
+                                "Vercel",
+                            ]}
+                        />
+                    </div>
+                </div>
+            </section>
+        </>
+    );
 };
 
 export default Skill;

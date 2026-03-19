@@ -1,50 +1,33 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Education from "./Education";
-import Experience from "./Experience";
 import { DarkModeContext } from "../context/DarkModeContext";
 
 const Qualification = () => {
-  const [isActive, setIsActive] = useState("education");
-  const { qualificationRef } = useContext(DarkModeContext);
+    const { qualificationRef } = useContext(DarkModeContext);
 
-  return (
-    <>
-      <div ref={qualificationRef}></div>
-      <div className="w-full" id="qualification">
-        <div className="text-center">
-          <h1 className="text-orange text-3xl font-bold">QUALIFICATIONS</h1>
-          <h3 className="text-gray-500">My personal journey</h3>
-        </div>
-        <div className="mt-10 flex justify-center gap-5">
-          <div
-            onClick={() => setIsActive("education")}
-            className={
-              isActive === "education"
-                ? "text-orange flex items-center gap-2 text-xl cursor-pointer"
-                : "flex items-center gap-2 text-xl cursor-pointer"
-            }
-          >
-            <i className="bx bxs-graduation"></i>
-            <h1 className="font-bold">Education</h1>
-          </div>
-          <div
-            onClick={() => setIsActive("experience")}
-            className={
-              isActive === "experience"
-                ? "text-orange flex items-center gap-2 text-xl cursor-pointer"
-                : "flex items-center gap-2 text-xl cursor-pointer"
-            }
-          >
-            <i className="bx bxs-briefcase"></i>
-            <h1 className="font-bold">Experience</h1>
-          </div>
-        </div>
-        {isActive === "education" && <Education />}
+    return (
+        <>
+            <div ref={qualificationRef}></div>
 
-        {isActive === "experience" && <Experience />}
-      </div>
-    </>
-  );
+            <section className="w-full py-20" id="qualification">
+                <div className="max-w-4xl mx-auto px-6">
+
+                    <div className="text-center">
+                        <h1 className="text-3xl text-primary md:text-4xl font-bold">
+                            Qualification
+                        </h1>
+                        <p className="text-mutedLight dark:text-mutedDark mt-2">
+                            My academic background
+                        </p>
+                    </div>
+
+                    <div className="mt-12">
+                        <Education />
+                    </div>
+                </div>
+            </section>
+        </>
+    );
 };
 
 export default Qualification;
