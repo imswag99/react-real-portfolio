@@ -23,7 +23,7 @@ const Project = () => {
 
             <div className="max-w-6xl mx-auto px-5 mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">
-                    Projects
+                    Selected Projects
                 </h2>
                 <p className="text-mutedLight dark:text-mutedDark mt-2 text-center">
                     A collection of projects focused on building scalable and
